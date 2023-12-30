@@ -1,4 +1,4 @@
-use tauri::{Window, WindowEvent, GlobalWindowEvent};
+use tauri::{WindowEvent, GlobalWindowEvent};
 
 pub fn get_event_handler(event: GlobalWindowEvent) {
     match event.event() {

@@ -1,4 +1,4 @@
-use tauri::{SystemTrayEvent, Runtime, AppHandle, Manager};
+use tauri::{SystemTrayEvent, AppHandle};
 use crate::utils;
 
 pub fn get_event_handler(app: &AppHandle, event: SystemTrayEvent) {

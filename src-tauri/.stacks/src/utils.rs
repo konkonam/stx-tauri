@@ -20,8 +20,6 @@ pub fn toggle_main_window(app: &AppHandle, position: PhysicalPosition<f64>) {
     let window_opt = app.get_window("main");
     if let Some(main_window) = window_opt {
 
-        main_window.emit()
-
         if main_window.is_visible().unwrap_or(false) {
             main_window.hide();
         } else {
