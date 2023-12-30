@@ -1,0 +1,12 @@
+[package]
+name = "stacks"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tauri = { version = "1.5.4", features = ["system-tray", "wry"] }
+serde_json = "1.0.108"
+tauri-plugin-store = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
+
