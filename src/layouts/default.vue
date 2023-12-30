@@ -1,15 +1,17 @@
-<template>
-  <TheHeader/>
-  <main
-    px-4 py-10
-    text="center gray-700 dark:gray-200"
-  >
-    <RouterView />
-    <TheFooter />
-    <div mx-auto mt-5 text-center text-sm opacity-50>
-      [Default Layout]
-    </div>
-  </main>
-</template>
 <script setup lang="ts">
+  const route = useRoute();
 </script>
+
+<template>
+  <div class="min-h-screen flex flex-col">
+    <Header />
+
+    <main class="container mx-auto px-4 pt-4 bg-black:90 grow text-white">
+      <Controls
+        v-if="route.fullPath !== '/'"
+      />
+
+      <RouterView />
+    </main>
+  </div>
+</template>
